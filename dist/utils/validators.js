@@ -112,6 +112,8 @@ function validateTheme(theme) {
         'technical-report',
         'book',
         'executive-report',
+        'google',
+        'microsoft-365',
     ];
     // Check if it's a built-in theme
     if (builtInThemes.includes(theme)) {

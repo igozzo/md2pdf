@@ -14,7 +14,9 @@ export type ThemeName =
   | 'ibm' 
   | 'technical-report' 
   | 'book' 
-  | 'executive-report';
+  | 'executive-report'
+  | 'google'
+  | 'microsoft-365';
 
 export interface PageMargins {
   top: string;

@@ -77,6 +77,8 @@ export function validateTheme(theme: string): boolean {
     'technical-report',
     'book',
     'executive-report',
+    'google',
+    'microsoft-365',
   ];
 
   // Check if it's a built-in theme

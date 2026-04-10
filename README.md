@@ -17,7 +17,7 @@ A comprehensive TypeScript-based tool that converts Markdown files to PDF with f
 - **Advanced**: Mermaid diagrams, math equations (KaTeX)
 
 ### Themes
-10 professionally designed themes:
+12 professionally designed themes:
 - `default` - Clean, professional styling
 - `github` - GitHub-style documentation
 - `academic` - Academic paper formatting
@@ -28,6 +28,8 @@ A comprehensive TypeScript-based tool that converts Markdown files to PDF with f
 - `technical-report` - Technical documentation
 - `book` - Book-style formatting
 - `executive-report` - Executive summary style
+- `google` - Google Material styling
+- `microsoft-365` - Microsoft 365 Fluent UI styling
 
 ### PDF Options
 - Multiple page sizes (A4, A3, A5, Letter, Legal, Tabloid)

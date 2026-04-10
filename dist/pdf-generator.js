@@ -59,7 +59,7 @@ class PdfGenerator {
                 }
             }
             // Additional wait for any dynamic content
-            await page.waitForTimeout(1000);
+            await new Promise(r => setTimeout(r, 1000));
             // Build PDF options
             const pdfOptions = this.buildPdfOptions(outputPath, options);
             // Generate PDF

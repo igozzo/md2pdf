@@ -3,7 +3,7 @@
  */
 export type PageSize = 'A4' | 'A3' | 'A5' | 'Letter' | 'Legal' | 'Tabloid';
 export type PageOrientation = 'portrait' | 'landscape';
-export type ThemeName = 'default' | 'github' | 'academic' | 'minimal' | 'dark' | 'corporate' | 'ibm' | 'technical-report' | 'book' | 'executive-report';
+export type ThemeName = 'default' | 'github' | 'academic' | 'minimal' | 'dark' | 'corporate' | 'ibm' | 'technical-report' | 'book' | 'executive-report' | 'google' | 'microsoft-365';
 export interface PageMargins {
     top: string;
     right: string;

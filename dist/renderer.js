@@ -148,7 +148,7 @@ class HtmlRenderer {
         // Check if it's a built-in theme
         const builtInThemes = [
             'default', 'github', 'academic', 'minimal', 'dark',
-            'corporate', 'ibm', 'technical-report', 'book', 'executive-report'
+            'corporate', 'ibm', 'technical-report', 'book', 'executive-report', 'google', 'microsoft-365'
         ];
         if (builtInThemes.includes(themeName)) {
             const themePath = path.join(__dirname, 'styles', 'themes', `${themeName}.css`);

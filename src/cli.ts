@@ -21,7 +21,7 @@ program
 program
   .argument('<input>', 'Input markdown file')
   .argument('[output]', 'Output PDF file (optional, defaults to input name with .pdf extension)')
-  .option('-t, --theme <theme>', 'Theme to use (default, github, academic, minimal, dark, corporate, ibm, technical-report, book, executive-report)', 'default')
+  .option('-t, --theme <theme>', 'Theme to use (default, github, academic, minimal, dark, corporate, ibm, technical-report, book, executive-report, google, microsoft-365)', 'default')
   .option('-p, --page-size <size>', 'Page size (A4, A3, A5, Letter, Legal, Tabloid)', 'A4')
   .option('-o, --orientation <orientation>', 'Page orientation (portrait, landscape)', 'portrait')
   .option('-m, --margins <margins>', 'Page margins (e.g., "20mm" or "20mm 30mm 20mm 30mm")', '20mm')
@@ -204,6 +204,8 @@ program
       { name: 'technical-report', description: 'Technical documentation' },
       { name: 'book', description: 'Book-style formatting' },
       { name: 'executive-report', description: 'Executive summary style' },
+      { name: 'google', description: 'Google Material styling' },
+      { name: 'microsoft-365', description: 'Microsoft 365 Fluent UI styling' },
     ];
 
     for (const theme of themes) {

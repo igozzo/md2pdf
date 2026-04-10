@@ -1,0 +1,107 @@
+/* Microsoft 365 Fluent UI Theme for md2pdf */
+
+:root {
+  --primary-color: #0078d4;
+  --secondary-color: #605e5c;
+  --background-color: #ffffff;
+  --text-color: #323130;
+  --heading-color: #323130;
+  --link-color: #0078d4;
+  --code-color: #c93b3b;
+  --code-background: #f3f2f1;
+  --border-color: #edebe9;
+  --table-border: #edebe9;
+  --table-header-bg: #faf9f8;
+  --blockquote-bg: #faf9f8;
+  --blockquote-border: #0078d4;
+}
+
+body {
+  font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, Helvetica, Arial, sans-serif;
+  color: var(--text-color);
+  background-color: var(--background-color);
+  line-height: 1.5;
+  font-size: 14px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Segoe UI Semibold', 'Segoe UI', sans-serif;
+  color: var(--heading-color);
+  font-weight: 600;
+  margin-top: 24px;
+  margin-bottom: 12px;
+}
+
+a {
+  color: var(--link-color);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+code {
+  font-family: Consolas, 'Courier New', monospace;
+  background-color: var(--code-background);
+  color: var(--code-color);
+  padding: 2px 4px;
+  border-radius: 2px;
+  font-size: 0.9em;
+}
+
+pre {
+  background-color: var(--code-background);
+  padding: 16px;
+  border-radius: 4px;
+  overflow: auto;
+}
+
+pre code {
+  color: inherit;
+  background-color: transparent;
+  padding: 0;
+}
+
+blockquote {
+  margin: 16px 0;
+  padding: 12px 16px;
+  background-color: var(--blockquote-bg);
+  border-left: 3px solid var(--blockquote-border);
+  color: var(--secondary-color);
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
+  border: 1px solid var(--table-border);
+}
+
+th, td {
+  padding: 10px 12px;
+  border-bottom: 1px solid var(--table-border);
+  text-align: left;
+}
+
+th {
+  background-color: var(--table-header-bg);
+  font-weight: 600;
+}
+
+img {
+  max-width: 100%;
+  border-radius: 4px;
+}
+
+hr {
+  border: 0;
+  border-bottom: 1px solid var(--border-color);
+  margin: 24px 0;
+}
+
+ul, ol {
+  padding-left: 32px;
+  margin-top: 8px;
+  margin-bottom: 8px;
+}
