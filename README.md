@@ -3,6 +3,8 @@
 ![License](https://img.shields.io/badge/License-MIT-green?style=for-the-badge)
 ![Version](https://img.shields.io/badge/Version-1.1.0-orange?style=for-the-badge)
 ![TypeScript](https://img.shields.io/badge/TypeScript-5.3+-blue?style=for-the-badge&logo=typescript&logoColor=white)
+![JavaScript](https://img.shields.io/badge/JavaScript-ES6+-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
+![CSS3](https://img.shields.io/badge/CSS3-Vanilla-1572B6?style=for-the-badge&logo=css3&logoColor=white)
 ![Node](https://img.shields.io/badge/Node-18.0+-339933?style=for-the-badge&logo=node.js&logoColor=white)
 ![Platform](https://img.shields.io/badge/Platform-Windows%20%7C%20macOS%20%7C%20Linux-lightgrey?style=for-the-badge)
 
