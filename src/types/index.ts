@@ -1,0 +1,126 @@
+/**
+ * Type definitions for md2pdf
+ */
+
+export type PageSize = 'A4' | 'A3' | 'A5' | 'Letter' | 'Legal' | 'Tabloid';
+export type PageOrientation = 'portrait' | 'landscape';
+export type ThemeName = 
+  | 'default' 
+  | 'github' 
+  | 'academic' 
+  | 'minimal' 
+  | 'dark' 
+  | 'corporate' 
+  | 'ibm' 
+  | 'technical-report' 
+  | 'book' 
+  | 'executive-report';
+
+export interface PageMargins {
+  top: string;
+  right: string;
+  bottom: string;
+  left: string;
+}
+
+export interface ThemeColors {
+  primary?: string;
+  secondary?: string;
+  background?: string;
+  text?: string;
+  heading?: string;
+  link?: string;
+  code?: string;
+  codeBackground?: string;
+  border?: string;
+  tableBorder?: string;
+  tableHeaderBackground?: string;
+  blockquoteBackground?: string;
+  blockquoteBorder?: string;
+}
+
+export interface ThemeFonts {
+  body?: string;
+  heading?: string;
+  code?: string;
+  size?: string;
+  lineHeight?: string;
+}
+
+export interface ThemeSpacing {
+  paragraphSpacing?: string;
+  headingSpacing?: string;
+  listSpacing?: string;
+  codeBlockSpacing?: string;
+}
+
+export interface ThemeCustomization {
+  colors?: ThemeColors;
+  fonts?: ThemeFonts;
+  spacing?: ThemeSpacing;
+  customCSS?: string;
+}
+
+export interface ConversionOptions {
+  // Page settings
+  pageSize?: PageSize;
+  orientation?: PageOrientation;
+  margins?: PageMargins | string;
+  
+  // Styling
+  theme?: ThemeName | string;
+  themeCustomization?: ThemeCustomization;
+  customCSS?: string;
+  
+  // Features
+  enableMermaid?: boolean;
+  enableMath?: boolean;
+  enableSyntaxHighlight?: boolean;
+  enableTableOfContents?: boolean;
+  
+  // Output
+  displayHeaderFooter?: boolean;
+  headerTemplate?: string;
+  footerTemplate?: string;
+  
+  // PDF metadata
+  title?: string;
+  author?: string;
+  subject?: string;
+  keywords?: string;
+  
+  // Advanced
+  scale?: number;
+  printBackground?: boolean;
+  preferCSSPageSize?: boolean;
+}
+
+export interface MarkdownMetadata {
+  title?: string;
+  author?: string;
+  date?: string;
+  [key: string]: any;
+}
+
+export interface ProcessedContent {
+  html: string;
+  metadata: MarkdownMetadata;
+  hasMermaid: boolean;
+  hasMath: boolean;
+  hasCode: boolean;
+}
+
+export interface Theme {
+  name: string;
+  css: string;
+  description?: string;
+}
+
+export interface ConversionResult {
+  success: boolean;
+  outputPath?: string;
+  error?: Error;
+  metadata?: MarkdownMetadata;
+}
+
+// Made with Bob
