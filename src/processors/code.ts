@@ -46,16 +46,13 @@ export class CodeProcessor {
    * Decode HTML entities in code
    */
   private decodeHtmlEntities(text: string): string {
-    const entities: Record<string, string> = {
-      '&': '&',
-      '<': '<',
-      '>': '>',
-      '"': '"',
-      ''': "'",
-      '&#x2F;': '/',
-    };
-
-    return text.replace(/&[#\w]+;/g, (entity) => entities[entity] || entity);
+    return text
+      .replace(/&/g, '&')
+      .replace(/</g, '<')
+      .replace(/>/g, '>')
+      .replace(/"/g, '"')
+      .replace(/'/g, "'")
+      .replace(/&#x2F;/g, '/');
   }
 
   /**

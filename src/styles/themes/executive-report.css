@@ -1,0 +1,269 @@
+/**
+ * Executive Report theme for md2pdf
+ * Professional executive summary and business report styling
+ */
+
+:root {
+  --primary-color: #1e3a8a;
+  --secondary-color: #3b82f6;
+  --accent-color: #f59e0b;
+  --background-color: #ffffff;
+  --text-color: #1f2937;
+  --heading-color: #1e3a8a;
+  --link-color: #3b82f6;
+  --code-background: #f3f4f6;
+  --code-color: #1f2937;
+  --border-color: #d1d5db;
+  --table-border: #9ca3af;
+  --table-header-bg: #1e3a8a;
+  --table-header-text: #ffffff;
+  --highlight-bg: #fef3c7;
+  --sidebar-bg: #eff6ff;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', 'Arial', 'Helvetica Neue', sans-serif;
+  font-size: 11pt;
+  line-height: 1.5;
+  color: var(--text-color);
+  background-color: var(--background-color);
+  margin: 0;
+  padding: 0.75in;
+  max-width: 8.5in;
+}
+
+/* Headings */
+h1, h2, h3, h4, h5, h6 {
+  color: var(--heading-color);
+  font-weight: 700;
+  line-height: 1.2;
+  page-break-after: avoid;
+}
+
+h1 {
+  font-size: 26pt;
+  margin: 0 0 24pt 0;
+  padding: 18pt 0;
+  text-align: center;
+  background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+  color: #ffffff;
+  text-transform: uppercase;
+  letter-spacing: 2pt;
+}
+
+h2 {
+  font-size: 18pt;
+  margin: 24pt 0 12pt 0;
+  padding-bottom: 6pt;
+  border-bottom: 3pt solid var(--accent-color);
+}
+
+h3 {
+  font-size: 14pt;
+  margin: 18pt 0 10pt 0;
+  color: var(--secondary-color);
+}
+
+h4 {
+  font-size: 12pt;
+  margin: 14pt 0 8pt 0;
+  font-weight: 600;
+}
+
+h5, h6 {
+  font-size: 11pt;
+  margin: 12pt 0 6pt 0;
+  font-weight: 600;
+}
+
+/* Paragraphs */
+p {
+  margin: 0 0 10pt 0;
+  text-align: justify;
+}
+
+/* Links */
+a {
+  color: var(--link-color);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Lists */
+ul, ol {
+  margin: 0 0 10pt 0;
+  padding-left: 30pt;
+}
+
+li {
+  margin-bottom: 4pt;
+}
+
+/* Code */
+code {
+  font-family: 'Consolas', 'Courier New', monospace;
+  font-size: 9pt;
+  background-color: var(--code-background);
+  padding: 2pt 4pt;
+  border-radius: 2pt;
+}
+
+pre {
+  background-color: var(--code-background);
+  border-left: 3pt solid var(--secondary-color);
+  padding: 10pt;
+  overflow-x: auto;
+  margin: 10pt 0;
+  page-break-inside: avoid;
+}
+
+pre code {
+  background-color: transparent;
+  padding: 0;
+  font-size: 9pt;
+}
+
+/* Tables */
+table {
+  border-collapse: collapse;
+  width: 100%;
+  margin: 12pt 0;
+  font-size: 10pt;
+  page-break-inside: avoid;
+  box-shadow: 0 2pt 4pt rgba(0, 0, 0, 0.1);
+}
+
+th, td {
+  border: 1pt solid var(--table-border);
+  padding: 8pt 12pt;
+  text-align: left;
+}
+
+th {
+  background-color: var(--table-header-bg);
+  color: var(--table-header-text);
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 9pt;
+  letter-spacing: 0.5pt;
+}
+
+tr:nth-child(even) {
+  background-color: #f9fafb;
+}
+
+tr:hover {
+  background-color: var(--sidebar-bg);
+}
+
+/* Blockquotes */
+blockquote {
+  margin: 12pt 0;
+  padding: 12pt 18pt;
+  background-color: var(--sidebar-bg);
+  border-left: 4pt solid var(--secondary-color);
+  font-style: italic;
+}
+
+/* Horizontal rule */
+hr {
+  border: none;
+  border-top: 2pt solid var(--border-color);
+  margin: 20pt 0;
+}
+
+/* Images */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 12pt auto;
+  border: 1pt solid var(--border-color);
+  box-shadow: 0 2pt 4pt rgba(0, 0, 0, 0.1);
+  page-break-inside: avoid;
+}
+
+/* Executive Summary Box */
+.executive-summary {
+  background-color: var(--sidebar-bg);
+  border: 2pt solid var(--primary-color);
+  border-radius: 4pt;
+  padding: 18pt;
+  margin: 18pt 0;
+  page-break-inside: avoid;
+}
+
+.executive-summary h2 {
+  margin-top: 0;
+  color: var(--primary-color);
+  border-bottom: none;
+}
+
+/* Key Points */
+.key-points {
+  background-color: var(--highlight-bg);
+  border-left: 4pt solid var(--accent-color);
+  padding: 12pt 18pt;
+  margin: 12pt 0;
+}
+
+/* Metrics/Stats */
+.metric {
+  display: inline-block;
+  background-color: var(--primary-color);
+  color: #ffffff;
+  padding: 8pt 16pt;
+  margin: 4pt;
+  border-radius: 4pt;
+  font-weight: 700;
+  font-size: 14pt;
+}
+
+/* Footnotes */
+.footnotes {
+  margin-top: 24pt;
+  padding-top: 12pt;
+  border-top: 2pt solid var(--border-color);
+  font-size: 9pt;
+  color: #6b7280;
+}
+
+/* Print styles */
+@media print {
+  body {
+    padding: 0;
+  }
+  
+  @page {
+    margin: 0.75in;
+  }
+  
+  h1 {
+    background: var(--primary-color);
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    page-break-after: avoid;
+  }
+  
+  img, table, pre, blockquote {
+    page-break-inside: avoid;
+  }
+  
+  .executive-summary, .key-points {
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+}
+
+/* Made with Bob */

@@ -3,7 +3,6 @@
  */
 
 import katex from 'katex';
-import { MathRenderError } from '../utils/errors';
 
 export class MathProcessor {
   /**
@@ -26,7 +25,7 @@ export class MathProcessor {
     // Match $$...$$ but not inside code blocks
     const blockMathRegex = /\$\$([\s\S]+?)\$\$/g;
     
-    return html.replace(blockMathRegex, (match, equation) => {
+    return html.replace(blockMathRegex, (_match, equation) => {
       try {
         const rendered = katex.renderToString(equation.trim(), {
           displayMode: true,
@@ -51,7 +50,7 @@ export class MathProcessor {
     // This regex avoids matching $$ and ensures we're not in a code block
     const inlineMathRegex = /(?<!\$)\$(?!\$)([^\$\n]+?)\$(?!\$)/g;
     
-    return html.replace(inlineMathRegex, (match, equation) => {
+    return html.replace(inlineMathRegex, (_match, equation) => {
       try {
         const rendered = katex.renderToString(equation.trim(), {
           displayMode: false,

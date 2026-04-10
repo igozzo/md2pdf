@@ -2,8 +2,6 @@
  * Mermaid diagram processor
  */
 
-import { MermaidRenderError } from '../utils/errors';
-
 export class MermaidProcessor {
   /**
    * Process HTML to prepare Mermaid diagrams for rendering
@@ -15,7 +13,7 @@ export class MermaidProcessor {
     const mermaidRegex = /<div class="mermaid">\s*([\s\S]*?)\s*<\/div>/g;
     
     let counter = 0;
-    return html.replace(mermaidRegex, (match, content) => {
+    return html.replace(mermaidRegex, (_match, content) => {
       counter++;
       const id = `mermaid-diagram-${counter}`;
       

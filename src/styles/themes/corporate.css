@@ -1,0 +1,218 @@
+/**
+ * Corporate theme for md2pdf
+ * Professional business document styling
+ */
+
+:root {
+  --primary-color: #003366;
+  --secondary-color: #0066cc;
+  --background-color: #ffffff;
+  --text-color: #333333;
+  --heading-color: #003366;
+  --link-color: #0066cc;
+  --code-background: #f4f4f4;
+  --code-color: #333333;
+  --border-color: #cccccc;
+  --table-border: #999999;
+  --table-header-bg: #003366;
+  --table-header-text: #ffffff;
+  --blockquote-bg: #f9f9f9;
+  --blockquote-border: #0066cc;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Calibri', 'Arial', 'Helvetica Neue', sans-serif;
+  font-size: 11pt;
+  line-height: 1.5;
+  color: var(--text-color);
+  background-color: var(--background-color);
+  margin: 0;
+  padding: 0.75in;
+  max-width: 8.5in;
+}
+
+/* Headings */
+h1, h2, h3, h4, h5, h6 {
+  color: var(--heading-color);
+  font-weight: 600;
+  line-height: 1.2;
+  page-break-after: avoid;
+}
+
+h1 {
+  font-size: 24pt;
+  margin: 0 0 20pt 0;
+  padding-bottom: 10pt;
+  border-bottom: 3pt solid var(--primary-color);
+  text-transform: uppercase;
+  letter-spacing: 1pt;
+}
+
+h2 {
+  font-size: 16pt;
+  margin: 18pt 0 12pt 0;
+  padding-left: 10pt;
+  border-left: 4pt solid var(--secondary-color);
+}
+
+h3 {
+  font-size: 14pt;
+  margin: 14pt 0 10pt 0;
+}
+
+h4 {
+  font-size: 12pt;
+  margin: 12pt 0 8pt 0;
+}
+
+h5, h6 {
+  font-size: 11pt;
+  margin: 10pt 0 6pt 0;
+}
+
+/* Paragraphs */
+p {
+  margin: 0 0 10pt 0;
+  text-align: justify;
+}
+
+/* Links */
+a {
+  color: var(--link-color);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Lists */
+ul, ol {
+  margin: 0 0 10pt 0;
+  padding-left: 30pt;
+}
+
+li {
+  margin-bottom: 4pt;
+}
+
+/* Code */
+code {
+  font-family: 'Consolas', 'Courier New', monospace;
+  font-size: 9pt;
+  background-color: var(--code-background);
+  padding: 2pt 4pt;
+  border: 1pt solid var(--border-color);
+  border-radius: 2pt;
+}
+
+pre {
+  background-color: var(--code-background);
+  border: 1pt solid var(--border-color);
+  border-left: 3pt solid var(--secondary-color);
+  padding: 10pt;
+  overflow-x: auto;
+  margin: 10pt 0;
+  page-break-inside: avoid;
+}
+
+pre code {
+  background-color: transparent;
+  border: none;
+  padding: 0;
+  font-size: 9pt;
+}
+
+/* Tables */
+table {
+  border-collapse: collapse;
+  width: 100%;
+  margin: 12pt 0;
+  page-break-inside: avoid;
+}
+
+th, td {
+  border: 1pt solid var(--table-border);
+  padding: 6pt 10pt;
+  text-align: left;
+}
+
+th {
+  background-color: var(--table-header-bg);
+  color: var(--table-header-text);
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 10pt;
+}
+
+tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+/* Blockquotes */
+blockquote {
+  margin: 12pt 0;
+  padding: 10pt 15pt;
+  background-color: var(--blockquote-bg);
+  border-left: 4pt solid var(--blockquote-border);
+  font-style: italic;
+}
+
+/* Horizontal rule */
+hr {
+  border: none;
+  border-top: 2pt solid var(--border-color);
+  margin: 20pt 0;
+}
+
+/* Images */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 12pt auto;
+  border: 1pt solid var(--border-color);
+  page-break-inside: avoid;
+}
+
+/* Footnotes */
+.footnotes {
+  margin-top: 24pt;
+  padding-top: 12pt;
+  border-top: 1pt solid var(--border-color);
+  font-size: 9pt;
+}
+
+/* Executive summary box */
+.executive-summary {
+  background-color: #f0f4f8;
+  border: 2pt solid var(--primary-color);
+  padding: 15pt;
+  margin: 20pt 0;
+}
+
+/* Print styles */
+@media print {
+  body {
+    padding: 0;
+  }
+  
+  @page {
+    margin: 0.75in;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    page-break-after: avoid;
+  }
+  
+  img, table, pre, blockquote {
+    page-break-inside: avoid;
+  }
+}
+
+/* Made with Bob */
